@@ -2,12 +2,158 @@
 <html>
 
 <head>
-    <!-- TODO: Include Font Awesome file here -->
     <!-- TODO: Include Google Fonts file here -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="styles/common.css" />
+    <link rel="stylesheet" type="text/css" href="styles/index.css" />
+
 </head>
 
 <body>
     <!-- TODO: Include all your code for the header and home page here -->
+    <header>
+        <button id="signInBtn" type="button" class="btn btn-primary btn-header" data-toggle="modal"
+            data-target="#signInModal">Sign In</button>
+        <button id="signUpBtn" type="button" class="btn btn-primary btn-header" data-toggle="modal"
+            data-target="#signUpModal">Sign Up</button>
+
+
+        <a style="font-family: 'Montez', cursive;color:blue;font-size: xx-large;margin:0px 10px;">ScriBBler</a>
+        <p style="font-family: 'Ubuntu Mono', monospace;margin:0px 10px;">
+            Explore, Imagine, Create
+        </p>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Get started</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="inputName1">Username</label>
+                                <input type="text" required class="form-control signin-form" id="inputName1"
+                                    aria-describedby="emailName" placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail1">Username</label>
+                                <input type="email" required class="form-control signin-form" id="inputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter your username">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword1">Password</label>
+                                <input type="password" required class="form-control signin-form" id="inputPassword1"
+                                    placeholder="Enter your password">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword2">Confirm Password</label>
+                                <input type="password" required class="form-control signin-form" id="inputPassword2"
+                                    placeholder="Re-egit nter your password">
+                            </div>
+                            <button class="form-control btn-success header-btns-modal">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <h5 class="modal-title">Welcome Back!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="inputEmail1">Username</label>
+                                <input type="email" required class="form-control signin-form" id="inputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter your username">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword1">Password</label>
+                                <input type="password" required class="form-control signin-form" id="inputPassword1"
+                                    placeholder="Enter your password">
+                            </div>
+                            <button class="form-control btn-success header-btns-modal">Sign In</button>
+                            <div class="footer-modal">
+                                <span><b>Not a member? </b> </span>
+                                <a href="" data-toggle="modal" data-target="#signUpModal" data-dismiss="modal">Sign
+                                    up</a>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="post-btns">
+        <button type="button" class="btn btn-warning">All Posts</button>
+        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#createPostModal">
+            Create Post
+        </button>
+        <div class="modal fade" id="createPostModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <h5 class="modal-title">Pen Your Post!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="inputTitle1">Title</label>
+                                <input type="text" required class="form-control signin-form" id="inputTitle1"
+                                    placeholder="Enter the title of your post">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputContent1">Contents</label>
+                                <textarea class="form-control signin-form" id="inputContent1"
+                                placeholder="Enter the contents of your post" style="height: 200px;" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button class="btn-success" style="border: 0;padding: 5px 15px;">Create</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
 </body>
 
 </html>
