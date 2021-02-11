@@ -1,15 +1,10 @@
-body{
-    /* height: 100vh; */
-    background-image: url(../images/background.jpg);   
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
 .btn-header{
     float: right;
     margin: 5px;
-    padding: 5px;
+    padding: 10px;
     width: 100px;
     border: 0;
+    background-color: #007bff;
+    color: white;
 }
+
