@@ -4,16 +4,16 @@
 <head>
 
     <link rel="stylesheet" type="text/css" href="../styles/postslist.css" />
-    <link rel="stylesheet" type="text/css" href="../styles/common.css" />
-    
+
+
     <!-- TODO: Include Font Awesome file here -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
     <!-- TODO: Include Google Fonts file here -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css">
-    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montez&family=Ubuntu+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -25,6 +25,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="../styles/common.css" />
 
 </head>
 
@@ -44,12 +46,11 @@
 
 
         <!-- Modal -->
-        <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Get started</h5>
+                        <h5 class="modal-title">Get started</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -74,7 +75,7 @@
                             <div class="form-group">
                                 <label for="inputPassword2">Confirm Password</label>
                                 <input type="password" required class="form-control signin-form" id="inputPassword2"
-                                    placeholder="Re-egit nter your password">
+                                    placeholder="Re-enter your password">
                             </div>
                             <button class="form-control btn-success header-btns-modal">Sign Up</button>
                         </form>
@@ -131,30 +132,31 @@
                 <p class="authorName">Srishti Gupta</p>
             </div>
 
-            <div class="postCard" >
+            <div class="postCard">
                 <div class="postTitle">
                     <p>‘let’ me be a ‘const’(ant), not a ‘var’(iable)!</p>
-                    <span >
+                    <span>
                         <i class="fa fa-trash" data-toggle="modal" data-target="#deletePostModal1"></i>
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                         <!-- Modal -->
-        <div class="modal fade" id="deletePostModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content modal-confirm">
-                
-                <div class="modal-body">
-                        <div class="deleteConfirm">
-                            Are you sure you want to delete this post?
+                        <div class="modal fade" id="deletePostModal1" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content modal-confirm">
+
+                                    <div class="modal-body">
+                                        <div class="deleteConfirm">
+                                            Are you sure you want to delete this post?
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-success" onclick="deletePost(post1)"
+                                                data-dismiss="modal" style="float: left;">Yes</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal"
+                                                style="float: right;">No</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <button class="btn btn-success" onclick="deletePost(post1)" data-dismiss="modal" style="float: left;">Yes</button>
-                            <button type="button" class="btn btn-danger" data-dismiss="modal"  style="float: right;">No</button>
-                        </div>
-                </div>
-            </div>
-        </div>
-    </div>
                     </span>
                 </div>
                 <p class="postContent">Since JavaScript does not have any type-checking, either of these keywords can be
@@ -180,36 +182,37 @@
                 <div class="postTitle">
                     <p>What is linting and how can it save you time?</p>
                     <span>
-                        <i class="fa fa-trash"  data-toggle="modal" data-target="#deletePostModal2"></i>
+                        <i class="fa fa-trash" data-toggle="modal" data-target="#deletePostModal2"></i>
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                         <!-- Modal -->
-        <div class="modal fade" id="deletePostModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content modal-confirm">
-                
-                <div class="modal-body">
-                        <div class="deleteConfirm">
-                            Are you sure you want to delete this post?
+                        <div class="modal fade" id="deletePostModal2" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content modal-confirm">
+
+                                    <div class="modal-body">
+                                        <div class="deleteConfirm">
+                                            Are you sure you want to delete this post?
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-success" onclick="deletePost(post2)"
+                                                data-dismiss="modal" style="float: left;">Yes</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal"
+                                                style="float: right;">No</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <button class="btn btn-success" onclick="deletePost(post2)" data-dismiss="modal" style="float: left;">Yes</button>
-                            <button type="button" class="btn btn-danger" data-dismiss="modal"  style="float: right;">No</button>
-                        </div>
-                </div>
-            </div>
-        </div>
-    </div>
                     </span>
                 </div>
                 <p class="postContent">One of the biggest challenges in software development is time. It’s something we
                     can’t easily get more of, but linting can help us make the most out of the time we have.</p>
-                    <a href="post.html">
-                        <span class="moreContent">
-                            <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                            <i class="fa fa-ellipsis-h"></i>
-                        </span>
-                    </a>
+                <a href="post.html">
+                    <span class="moreContent">
+                        <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
+                        <i class="fa fa-ellipsis-h"></i>
+                    </span>
+                </a>
             </div>
         </div>
         <!-- post 2 ends here -->
@@ -224,37 +227,38 @@
                 <div class="postTitle">
                     <p>How to Get More Views on Your Tech Blog</p>
                     <span>
-                        <i class="fa fa-trash"  data-toggle="modal" data-target="#deletePostModal3"></i>
+                        <i class="fa fa-trash" data-toggle="modal" data-target="#deletePostModal3"></i>
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                         <!-- Modal -->
-        <div class="modal fade" id="deletePostModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content modal-confirm">
-                
-                <div class="modal-body">
-                        <div class="deleteConfirm">
-                            Are you sure you want to delete this post?
+                        <div class="modal fade" id="deletePostModal3" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content modal-confirm">
+
+                                    <div class="modal-body">
+                                        <div class="deleteConfirm">
+                                            Are you sure you want to delete this post?
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-success" onclick="deletePost(post3)"
+                                                data-dismiss="modal" style="float: left;">Yes</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal"
+                                                style="float: right;">No</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <button class="btn btn-success" onclick="deletePost(post3)" data-dismiss="modal" style="float: left;">Yes</button>
-                            <button type="button" class="btn btn-danger" data-dismiss="modal"  style="float: right;">No</button>
-                        </div>
-                </div>
-            </div>
-        </div>
-    </div>
                     </span>
                 </div>
                 <p class="postContent">If you're a developer with a Twitter account, you've already seen everyone and
                     their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very
                     least, a recognizable name in the industry.</p>
-                    <a href="post.html">
-                        <span class="moreContent">
-                            <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                            <i class="fa fa-ellipsis-h"></i>
-                        </span>
-                    </a>
+                <a href="post.html">
+                    <span class="moreContent">
+                        <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
+                        <i class="fa fa-ellipsis-h"></i>
+                    </span>
+                </a>
             </div>
         </div>
         <!-- post 3 ends here -->
@@ -269,38 +273,39 @@
                 <div class="postTitle">
                     <p>How to write easily describable code</p>
                     <span>
-                        <i class="fa fa-trash"  data-toggle="modal" data-target="#deletePostModal4"></i>
+                        <i class="fa fa-trash" data-toggle="modal" data-target="#deletePostModal4"></i>
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                         <!-- Modal -->
-        <div class="modal fade" id="deletePostModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content modal-confirm">
-                
-                <div class="modal-body">
-                        <div class="deleteConfirm">
-                            Are you sure you want to delete this post?
+                        <div class="modal fade" id="deletePostModal4" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content modal-confirm">
+
+                                    <div class="modal-body">
+                                        <div class="deleteConfirm">
+                                            Are you sure you want to delete this post?
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-success" onclick="deletePost(post4)"
+                                                data-dismiss="modal" style="float: left;">Yes</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal"
+                                                style="float: right;">No</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <button class="btn btn-success" onclick="deletePost(post4)" data-dismiss="modal" style="float: left;">Yes</button>
-                            <button type="button" class="btn btn-danger" data-dismiss="modal"  style="float: right;">No</button>
-                        </div>
-                </div>
-            </div>
-        </div>
-    </div>
                     </span>
                 </div>
                 <p class="postContent">When code is not describable using words, most people have to do some mental
                     mapping to turn it in to words. This wastes mental energy, and you run the risk of getting the
                     mapping wrong. Different people will map to different words, which
                     leads to confusion when discussing the code.</p>
-                    <a href="post.html">
-                        <span class="moreContent">
-                            <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                            <i class="fa fa-ellipsis-h"></i>
-                        </span>
-                    </a>
+                <a href="post.html">
+                    <span class="moreContent">
+                        <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
+                        <i class="fa fa-ellipsis-h"></i>
+                    </span>
+                </a>
             </div>
         </div>
         <!-- post 4 ends here -->
@@ -315,39 +320,39 @@
                 <div class="postTitle">
                     <p>Everything you should know about ‘module’ & ‘require’ in Node.js</p>
                     <span>
-                        <i class="fa fa-trash"  data-toggle="modal" data-target="#deletePostModal5"></i>
+                        <i class="fa fa-trash" data-toggle="modal" data-target="#deletePostModal5"></i>
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                         <!-- Modal -->
-        <div class="modal fade" id="deletePostModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content modal-confirm">
-                
-                <div class="modal-body">
-                        <div class="deleteConfirm">
-                            Are you sure you want to delete this post?
+                        <div class="modal fade" id="deletePostModal5" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content modal-confirm">
+
+                                    <div class="modal-body">
+                                        <div class="deleteConfirm">
+                                            Are you sure you want to delete this post?
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-success" onclick="deletePost(post5)"
+                                                data-dismiss="modal" style="float: left;">Yes</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal"
+                                                style="float: right;">No</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <button class="btn btn-success" onclick="deletePost(post5)" data-dismiss="modal" 
-                            style="float: left;">Yes</button>
-                            <button type="button" class="btn btn-danger" data-dismiss="modal"  style="float: right;">No</button>
-                        </div>
-                </div>
-            </div>
-        </div>
-    </div>
                     </span>
                 </div>
                 <p class="postContent">Node.js treats each JavaScript file as a separate module. For instance, if you
                     have a file containing some code and this file is named xyz.js, then this file is treated as a
                     module in Node, and you can say that you’ve created a module
                     named xyz.</p>
-                    <a href="post.html">
-                        <span class="moreContent">
-                            <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
-                            <i class="fa fa-ellipsis-h"></i>
-                        </span>
-                    </a>
+                <a href="post.html">
+                    <span class="moreContent">
+                        <!-- TODO: Include Font Awesome icon for horizontal ellipsis icon here -->
+                        <i class="fa fa-ellipsis-h"></i>
+                    </span>
+                </a>
             </div>
         </div>
         <!-- post 5 ends here -->
@@ -356,7 +361,7 @@
 
     </div>
     <!-- list of all posts ends here -->
-    <script type="text/JavaScript" src="../scripts/postslist.js" ></script>
+    <script type="text/JavaScript" src="../scripts/postslist.js"></script>
 </body>
 
 </html>

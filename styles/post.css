@@ -41,4 +41,12 @@
 
 .userComment{
     border: 10px;
+    border: 10px solid lightgrey;
+    margin: 0;
+    padding: 5px;
 }
+
+.all-comments-heading{
+    display:none;
+}
+

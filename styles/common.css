@@ -8,3 +8,21 @@
     color: white;
 }
 
+.signin-form{
+    background-color: #e9ecef;
+    border:0px none ;
+    border-radius: 0;
+    margin-bottom: 10px;
+}
+
+.footer-modal{
+    text-align: center;
+    font-size: small;
+}
+
+.header-btns-modal{
+    margin: 30px 0px;
+    border-radius: 0;
+    border: 0;
+}
+

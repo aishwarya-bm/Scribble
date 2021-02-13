@@ -5,8 +5,11 @@
     <!-- TODO: Include Google Fonts file here -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css">
-    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -38,12 +41,11 @@
 
 
         <!-- Modal -->
-        <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Get started</h5>
+                        <h5 class="modal-title">Get started</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -68,7 +70,7 @@
                             <div class="form-group">
                                 <label for="inputPassword2">Confirm Password</label>
                                 <input type="password" required class="form-control signin-form" id="inputPassword2"
-                                    placeholder="Re-egit nter your password">
+                                    placeholder="Re-enter your password">
                             </div>
                             <button class="form-control btn-success header-btns-modal">Sign Up</button>
                         </form>
@@ -115,57 +117,53 @@
     </header>
 
     <div class="container">
-        <div id="title" style="text-align: center;">
+        <div id="title" style="text-align: center;font-size: larger;">
             <b>Everything you should know about ‘module’ & ‘require’ in Node.js</b>
             <!-- <input type = "text" id="inputPostTitle"> -->
         </div>
         <div style="margin: 15px 0px;padding: 10px 0px;">
             <div id="author">
-                Srishti Mehta
+                Srishti Gupta
                 <span style="float: right;">
-                    <button class="post-page-btn" id="editBtn" onclick="editPost()">Edit</button>
-                    <button class="post-page-btn" id="saveBtn"  onclick="savePost()" class="input-fields">Save</button>
+                    <button class="post-page-btn" id="editBtn" onclick="editPost()">Edit
+                        <span><i class="far fa-edit"></i></span></button>
+                    <button class="post-page-btn" id="saveBtn" onclick="savePost()" class="input-fields">Save
+                        <span><i class="far fa-save"></i></span></button>
                     <!-- add save,edit icon here -->
                 </span>
             </div>
 
         </div>
         <div id="content">
-            Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the Chrome
-            V8 engine and executes JavaScript code outside a web browser. Node.js lets developers use JavaScript to
-            write command line tools and for server-side scripting—running scripts server-side to produce dynamic web
-            page content before the page is sent to the user's web browser. Consequently, Node.js represents a
-            "JavaScript everywhere" paradigm,[6] unifying web-application development around a single programming
-            language, rather than different languages for server-side and client-side scripts.
-
-            Though .js is the standard filename extension for JavaScript code, the name "Node.js" doesn't refer to a
-            particular file in this context and is merely the name of the product. Node.js has an event-driven
-            architecture capable of asynchronous I/O. These design choices aim to optimize throughput and scalability in
-            web applications with many input/output operations, as well as for real-time Web applications (e.g.,
-            real-time communication programs and browser games).[7]
-
-            The Node.js distributed development project was previously governed by the Node.js Foundation,[8] and has
-            now merged with the JS Foundation to form the OpenJS Foundation, which is facilitated by the Linux
-            Foundation's Collaborative Projects program.[9]
-
-            Corporate users of Node.js software include GoDaddy,[10] Groupon,[11] IBM,[12] LinkedIn,[13][14]
-            Microsoft,[15][16] Netflix,[17] PayPal,[18][19] Rakuten, SAP,[20] Voxer,[21] Walmart,[22] Yahoo!,[23] and
-            Amazon Web Services.
+            Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some
+            code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that
+            you’ve created a module named xyz. Let’s take an example to understand this better. You have a file named
+            circle.js which consists of the logic for calculating the area & the circumference of a circle of a given
+            radius, as given below: circle.js You can call circle.js file a module named circle. You might be wondering
+            why is there a need to have multiple modules? You could have just written all the code in a single module.
+            Well, it is very important to write modular code. By modular, I mean to say that your code should be
+            independent and should be loosely coupled. Imagine that there’s a large application and you have all your
+            code written in just one place, just one file. Too messy, right?
         </div>
 
         <div>
-            <button class="post-page-btn" id="likeBtn" onclick="updateLikes()">Like
-                <!-- add like button icon -->
+            <button class="post-page-btn" id="likeBtn" onclick="updateLikes()">
+                <span><i class="fas fa-thumbs-up"></i></span> Like
+
             </button>
             <div id="likesCount"></div>
             <br>
             <!-- </div>
         <div> -->
-            <textarea style="height: 100px;width: 700px;" id="inputComment" placeholder="Leave a comment..."></textarea>
+            <textarea style="height: 80px;width: 700px;" id="inputComment" placeholder="Leave a comment..."></textarea>
             <br>
-            <button class="post-page-btn"  id="commentBtn" onclick="addComment()">Comment</button>
+            <button class="post-page-btn" id="commentBtn" onclick="addComment()">Comment</button>
         </div>
-        <div id="commentSection">
+        <div>
+            <h5 class="all-comments-heading" style="margin-bottom: 15px;">All Comments</h5>
+            <div id="commentSection">
+
+            </div>
         </div>
     </div>
     <script src="../scripts/post.js"></script>

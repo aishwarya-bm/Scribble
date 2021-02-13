@@ -2,11 +2,9 @@
 <html>
 
 <head>
-    <!-- TODO: Include Google Fonts file here -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css">
-    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&family=Ubuntu+Mono&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -25,12 +23,11 @@
 </head>
 
 <body>
-    <!-- TODO: Include all your code for the header and home page here -->
     <header>
-        <button id="signInBtn" type="button" class="btn-header" data-toggle="modal"
-            data-target="#signInModal">Sign In</button>
-        <button id="signUpBtn" type="button" class="btn-header" data-toggle="modal"
-            data-target="#signUpModal">Sign Up</button>
+        <button id="signInBtn" type="button" class="btn-header" data-toggle="modal" data-target="#signInModal">Sign
+            In</button>
+        <button id="signUpBtn" type="button" class="btn-header" data-toggle="modal" data-target="#signUpModal">Sign
+            Up</button>
 
 
         <a style="font-family: 'Montez', cursive;color:blue;font-size: xx-large;margin:0px 10px;">ScriBBler</a>
@@ -40,12 +37,11 @@
 
 
         <!-- Modal -->
-        <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
+        <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Get started</h5>
+                        <h5 class="modal-title">Get started</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -70,7 +66,7 @@
                             <div class="form-group">
                                 <label for="inputPassword2">Confirm Password</label>
                                 <input type="password" required class="form-control signin-form" id="inputPassword2"
-                                    placeholder="Re-egit nter your password">
+                                    placeholder="Re-enter your password">
                             </div>
                             <button class="form-control btn-success header-btns-modal">Sign Up</button>
                         </form>
@@ -80,7 +76,7 @@
         </div>
 
         <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
 
@@ -116,44 +112,48 @@
 
     </header>
 
-    <div class="post-btns">
-        <button type="button" class="btn btn-warning">All Posts</button>
-        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#createPostModal">
-            Create Post
-        </button>
-        <div class="modal fade" id="createPostModal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
+    <div class="container">
+        <div class="child">
+            <button type="button" class="post-btns" onclick="showPosts()">All Posts</button>
+            <button type="button" class="post-btns" data-toggle="modal" data-target="#createPostModal">
+                Create Post
+            </button>
+            <div class="modal fade" id="createPostModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
 
-                        <h5 class="modal-title">Pen Your Post!</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="inputTitle1">Title</label>
-                                <input type="text" required class="form-control signin-form" id="inputTitle1"
-                                    placeholder="Enter the title of your post">
-                            </div>
-                            <div class="form-group">
-                                <label for="inputContent1">Contents</label>
-                                <textarea class="form-control signin-form" id="inputContent1"
-                                placeholder="Enter the contents of your post" style="height: 200px;" required></textarea>
-                            </div>
-                            <div class="text-center">
-                                <button class="btn-success" style="border: 0;padding: 5px 15px;">Create</button>
-                            </div>
-                        </form>
-                    </div>
+                            <h5 class="modal-title">Pen Your Post!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="inputTitle1">Title</label>
+                                    <input type="text" required class="form-control signin-form" id="inputTitle1"
+                                        placeholder="Enter the title of your post">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputContent1">Contents</label>
+                                    <textarea class="form-control signin-form" id="inputContent1"
+                                        placeholder="Enter the contents of your post" style="height: 200px;"
+                                        required></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn-success" style="border: 0;padding: 5px 15px;">Create</button>
+                                </div>
+                            </form>
+                        </div>
 
+                    </div>
                 </div>
             </div>
         </div>
 
     </div>
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>
