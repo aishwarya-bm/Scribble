@@ -1,0 +1,44 @@
+.container{
+    padding: 10px;
+}
+
+#likeBtn
+{
+    margin: 20px 0px 0px 0px;
+}
+
+#commentBtn
+{
+    margin: 20px 0px 20px 0px;
+}
+
+#content{
+    text-align: justify;
+}
+
+.post-page-btn{
+    background-color: #e91e76;
+    color: white;
+    border: 0;
+    padding: 5px 15px;
+}
+
+.inputFields{
+    display: none;
+}
+
+#inputPostTitle, #inputPostContent{
+    text-align: center;
+    width: 100%;
+    border: 1px solid #e91e76;
+    padding: 5px;
+    text-align: justify;
+}
+
+#saveBtn{
+    display: none;
+}
+
+.userComment{
+    border: 10px;
+}
